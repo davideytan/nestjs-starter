@@ -1,0 +1,8 @@
+# NPM
+node_modules/
+
+# Build
+dist/
+
+# Project files
+.idea/

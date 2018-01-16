@@ -1,8 +1,12 @@
 import { Module } from '@nestjs/common';
+import { Configuration } from "./common";
 
 @Module({
   imports: [],
   controllers: [],
-  components: [],
+  components: [
+    Configuration
+  ]
 })
 export class ApplicationModule {}
+

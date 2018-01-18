@@ -1,3 +1,5 @@
+
+
 export class PaginatedData<T = any> {
 
   constructor(

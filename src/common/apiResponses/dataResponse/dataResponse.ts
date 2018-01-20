@@ -1,4 +1,4 @@
-import { GenericResponse } from "./genericResponse";
+import { GenericResponse } from "../genericResponse/genericResponse";
 
 export class DataResponse<T = any> extends GenericResponse{
 

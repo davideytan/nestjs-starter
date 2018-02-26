@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import { DataResponse } from "./dataResponse";
-import { GenericResponse } from "../";
+import { DataResponse } from "./data-response";
+import { GenericResponse } from "../../apiResponses/index";
 
 describe('DataResponse', () => {
 

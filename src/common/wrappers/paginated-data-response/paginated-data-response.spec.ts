@@ -1,7 +1,7 @@
 import { expect } from 'chai';
-import { PaginatedDataResponse } from "./paginatedDataResponse";
+import { PaginatedDataResponse } from "./paginated-data-response";
 import { PaginatedData } from "../../dataWrappers";
-import { DataResponse } from "../";
+import { DataResponse } from "../../apiResponses/index";
 
 describe('PaginatedDataResponse', () => {
 

@@ -1,5 +1,5 @@
-import { DataResponse } from "../dataResponse/dataResponse";
-import { PaginatedData } from "../../dataWrappers/paginatedData/paginatedData";
+import { DataResponse } from "../data-response/data-response";
+import { PaginatedData } from "../paginated-data/paginated-data";
 
 export class PaginatedDataResponse<T = any> extends DataResponse<T[]> {
 

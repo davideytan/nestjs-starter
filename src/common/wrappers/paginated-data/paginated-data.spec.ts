@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { PaginatedData } from "./paginatedData";
+import { PaginatedData } from "./paginated-data";
 
 describe('PaginatedData', () => {
 

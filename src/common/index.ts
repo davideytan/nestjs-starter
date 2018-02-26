@@ -1,3 +1,3 @@
 export * from './configuration';
-export * from './apiResponses';
-export * from './dataWrappers';
+export * from './wrappers';
+export * from './interfaces';

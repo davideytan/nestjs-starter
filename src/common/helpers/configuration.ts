@@ -1,6 +1,10 @@
-import {constants} from '../constants';
+import {constants as c} from '../../constants';
 
 export class Configuration {
+
+  constructor(
+    readonly constants: any = c
+  ) {}
 
   /**
    * This function returns the string value of the environment variable matching the given name.
@@ -20,7 +24,7 @@ export class Configuration {
    * @returns {any}
    */
   getConstant(cName: string): any {
-    return constants.hasOwnProperty(cName) ? constants[cName]
+    return this.constants.hasOwnProperty(cName) ? this.constants[cName]
       : undefined;
   }
 

@@ -4,3 +4,7 @@ export * from './read-controller.interface';
 export * from './create-controller.interface';
 export * from './update-controller.interface';
 export * from './delete-controller.interface';
+export * from './create-service.interface';
+export * from './read-service.interface';
+export * from './update-service.interface';
+export * from './delete-service.interface';

@@ -11,7 +11,8 @@
     "serve": "nodemon",
     "test": "mocha src/**/*.spec.ts --require ts-node/register --reporter spec",
     "lint": "$(npm bin)/tslint -c tslint.json -p . --fix",
-    "precommit": "$(npm bin)/tslint -c tslint.json -p ."
+    "lint:nofix": "$(npm bin)/tslint -c tslint.json -p .",
+    "precommit": "npm run lint:nofix && npm run test"
   },
   "dependencies": {
     "@nestjs/common": "^4.5.0",

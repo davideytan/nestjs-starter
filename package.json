@@ -6,8 +6,9 @@
   "scripts": {
     "build": "tsc",
     "build:docker": "docker build -t nest-starter .",
-    "start": "node index.js",
-    "start:dev": "nodemon",
+    "prestart": "npm run build",
+    "start": "node dist/main.js",
+    "serve": "nodemon",
     "test": "mocha src/**/*.spec.ts --require ts-node/register --reporter spec",
     "lint": "$(npm bin)/tslint -c tslint.json -p . --fix",
     "precommit": "$(npm bin)/tslint -c tslint.json -p ."

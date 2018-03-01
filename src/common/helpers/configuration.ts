@@ -3,7 +3,7 @@ import {constants as c} from '../../constants';
 export class Configuration {
 
   constructor(
-    readonly constants: any = c
+    readonly constants: any = c,
   ) {}
 
   /**

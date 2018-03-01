@@ -1,6 +1,6 @@
 export class ValidationError extends Error {
 
-  constructor (msg?: string) {
+  constructor(msg?: string) {
     super(msg);
   }
 

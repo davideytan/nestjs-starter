@@ -1,7 +1,7 @@
 export class GenericResponse {
 
-  constructor (
-    readonly message: string
+  constructor(
+    readonly message: string,
   ) {}
 
 }

@@ -1,18 +1,28 @@
-FROM node:carbon-alpine as dist
-WORKDIR /tmp/
-COPY package.json package-lock.json tsconfig.json ./
-COPY src/ src/
+FROM node:12
+
+RUN mkdir -p /nest
+ADD . /nest
+
 RUN npm i -g @nestjs/cli
+
+
+ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
+
+WORKDIR /nest
+
+# optionally if you want to run npm global bin without specifying path
+# ENV PATH=$PATH:/home/node/.npm-global/bin 
+
+# Set the user to use when running this image
+# RUN chown -R node:node /nest
+RUN chmod 755 /nest
+# USER node
+
+# Bundle app source
+COPY . .
 RUN npm install
-RUN npm run build
 
-FROM node:carbon-alpine as node_modules
-WORKDIR /tmp/
-COPY package.json package-lock.json ./
-RUN npm install --production
+EXPOSE 3000
+EXPOSE 8000
 
-FROM node:carbon-alpine
-WORKDIR /usr/local/nub-api
-COPY --from=node_modules /tmp/node_modules ./node_modules
-COPY --from=dist /tmp/dist ./dist
-CMD ["node", "dist/main.js"]
+CMD [ "npm", "start" ]
